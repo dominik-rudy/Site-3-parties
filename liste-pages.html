@@ -1,0 +1,52 @@
+<!doctype HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Liste des pages</title>
+    </head>
+    <body>
+        <nav>
+            <input name="searchbar"id="sb" placeholder="🔍 Rechercher...">
+            <a href="a-propos.html">À propos de nous</a>
+            <a href="article1.html">À la une</a>
+            <a href="index.html">Acceuil</a>
+        </nav>
+        <div class="fg">
+        <h1>
+            Voici un sommaire des pages contenues sur ce site:
+        </h1>
+        <ul>
+            <li><a class="anodeco" href="a-propos.html">À propos de nous</a></li>
+            <li>
+                <h2>Articles</h2>
+                <ol>
+                    <li>
+                        <a class="anodeco" href="article1.html">Article n°1</a>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        </div>
+
+        <footer>
+            <a href="https://github.com/dominik-rudy">
+                Auteur
+            </a>
+        </footer>
+        <script>
+            const sb = document.getElementById("sb");
+            sb.addEventListener("keypress",validate);
+            function validate(e) {
+                if (e.keyCode==13){
+                    e.preventDefault();
+                    const fg = document.getElementsByClassName("fg")[0];
+                    fg.innerHTML='\
+                    <style=\"*{padding:0 50%\"h2>\
+                    The search feature is a WIP, please come back later\
+                    </h2>'
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>

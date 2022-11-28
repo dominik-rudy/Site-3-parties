@@ -1,0 +1,51 @@
+body,
+html {
+    min-height: 100%;
+}
+
+img:first-child{
+    align-self: right;
+}
+html {
+    background-image: url("media/backg.jpg");
+    font-family: Helvetica;
+}
+
+nav {
+    background: #334;
+    padding: 3pt;
+    border: 1pt solid #445;
+}
+
+nav a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #eef;
+    padding: 3pt;
+    border: 1pt solid #445;
+}
+.anodeco{
+    text-decoration: none;
+    color:#001;
+    font-weight: bold;
+}
+
+.fg {
+    background-color: #eef8;
+    color: #001;
+    margin: 10pt;
+}
+
+.fg * {
+    margin-bottom: 10pt;
+}
+
+footer {
+    padding: 10pt;
+    background-color: #334;
+}
+
+footer a {
+    color: #eef;
+    text-decoration: none;
+}
