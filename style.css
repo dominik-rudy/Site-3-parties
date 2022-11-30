@@ -13,7 +13,7 @@ html {
 
 nav {
     background: #334;
-    padding: 3pt;
+    padding: 3pt; 
     border: 1pt solid #445;
 }
 
@@ -34,6 +34,7 @@ nav a {
     background-color: #eef8;
     color: #001;
     margin: 10pt;
+    padding:2pt;
 }
 
 .fg * {
