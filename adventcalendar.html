@@ -1,0 +1,195 @@
+<!doctype HTML>
+<html>
+    <head>
+        <style>
+            body,
+            html {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                padding: 0%;
+                margin: 0%;
+                background-color: darkgreen;
+                scroll-behavior: smooth;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            header, footer{
+                min-height: 2vmax;
+                background-color: #223;
+                color: #ddd;
+                padding: 2pt;
+                text-decoration: none;
+                position: sticky;
+                top: 0%;
+                margin: 0%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            header *{
+                all:unset;
+                padding: 2pt;
+                background-color: #2d2d3d;
+                height: 1.3vmax;
+                font-size: 1vmax;
+                margin: 0 1vmax;
+            }
+            .calendar-box{
+                display: flex;
+                flex-flow: row wrap;
+                padding: 10vmin;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+            .calendar-door{
+                border: 0.5vmin solid #eef;
+                margin: 1vmin;
+                height: 20vmin;
+                width: 15vmin;
+            }
+            .calendar-door:active{
+                background-color: red;
+                animation: "open-door" 1s;
+                animation-fill-mode: forwards;
+                -webkit-animation-fill-mode: forwards;
+                animation-delay: 1ms;
+            }
+
+            @keyframes open-door {
+                10%{transform:scaleX(0.9);}
+                20%{transform: scaleX(0.7);}
+
+                100%{background-color: aqua;}
+            }
+        </style>
+        <title>Calendrier de l'Avent</title>
+    </head>
+    <body>
+        <header>
+            <a href="Page-list.html">Liste Des Pages</a>
+            <a href="index.html">Page d'Acceuil</a>
+        </header>
+        <main>
+            <div id="calendar-box" class="calendar-box">
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+                <div class="calendar-door" name="door">
+                    <div class="moving-door"></div>
+                    <div class="chamber-contents"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <a href="https://github.com/dominik-rudy">
+                Auteur
+            </a>
+        </footer>
+        <script>
+            const date=Date();
+            const calendarDoors=document.getElementsByName("door")
+            calendarDoors.addEventListener("click",animDoor)
+            function animDoor(){
+            for(i=0;i++;(i>calendarDoors.length)&&((date.getMonth()===12)&&(date.getDate()<26))){
+                calendarDoors[i].style.animate
+            }}
+        </script>
+    </body>
+</html>
